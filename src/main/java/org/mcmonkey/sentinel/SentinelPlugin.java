@@ -12,6 +12,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.mcmonkey.sentinel.commands.SentinelCommand;
+import org.mcmonkey.sentinel.commands.WarriorCommand;
 import org.mcmonkey.sentinel.integration.*;
 import org.mcmonkey.sentinel.metrics.BStatsMetricsLite;
 import org.mcmonkey.sentinel.metrics.StatsRecord;
@@ -358,6 +359,7 @@ public class SentinelPlugin extends JavaPlugin {
         };
         postLoad.runTaskLater(this, 40);
         new SentinelCommand().buildCommandHandler(getCommand("sentinel"));
+          getCommand("warrior").setExecutor(new WarriorCommand());
         Bukkit.getPluginManager().registerEvents(new SentinelEventHandler(), this);
         // bstats.org
         try {
