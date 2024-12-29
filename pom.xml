@@ -1,5 +1,3 @@
-<!-- Sentinel build file -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -27,18 +25,25 @@
             <id>FreneticLLC-public</id>
             <name>FreneticLLC Maven Server</name>
             <url>https://maven.freneticllc.com/</url>
-        </repository>
-    </repositories>
+         </repository>
+
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+            </repository>
+      </repositories>
 
     <dependencies>
         <!-- Basic Requirements -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>${bukkit.version}</version>
+            <version>1.21.1-R0.1-SNAPSHOT</version>
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
+
+
         <dependency>
             <groupId>net.citizensnpcs</groupId>
             <artifactId>citizens-main</artifactId>
@@ -46,18 +51,21 @@
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>com.freneticllc.freneticutilities</groupId>
             <artifactId>freneticdatasyntax</artifactId>
             <version>1.1</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>LATEST</version>
             <scope>compile</scope>
         </dependency>
+
         <!-- Primary Support -->
         <dependency>
             <groupId>net.milkbowl.vault</groupId>
@@ -66,6 +74,7 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/Vault.jar</systemPath>
         </dependency>
+
         <!-- Also Supported -->
         <dependency>
             <groupId>com.tommytony</groupId>
@@ -75,6 +84,14 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/war.jar</systemPath>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.rumsfield</groupId>
+            <artifactId>konquest</artifactId>
+            <version>v1.6.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>com.palmergames.bukkit</groupId>
             <artifactId>towny</artifactId>
@@ -83,13 +100,15 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/towny.jar</systemPath>
         </dependency>
-            <dependency>
+
+        <dependency>
             <groupId>com.massivecraft</groupId>
             <artifactId>factions</artifactId>
             <version>2.8.21</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/Factions.jar</systemPath>
         </dependency>
+
         <dependency>
             <groupId>com.massivecraft</groupId>
             <artifactId>massivecore</artifactId>
@@ -97,6 +116,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/MassiveCore.jar</systemPath>
         </dependency>
+
         <dependency>
             <groupId>com.shampaggon</groupId>
             <artifactId>crackshot</artifactId>
@@ -104,6 +124,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/CrackShot.jar</systemPath>
         </dependency>
+
         <dependency>
             <groupId>net.sacredlabyrinth.phaed.simpleclans</groupId>
             <artifactId>SimpleClans</artifactId>
@@ -111,6 +132,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/SimpleClans.jar</systemPath>
         </dependency>
+
         <dependency>
             <groupId>simplepets.brainsynder</groupId>
             <artifactId>SimplePets</artifactId>
@@ -118,6 +140,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/SimplePets.jar</systemPath>
         </dependency>
+
         <dependency>
             <groupId>com.sk89q</groupId>
             <artifactId>WorldEdit</artifactId>
@@ -125,6 +148,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/lib/WorldEdit.jar</systemPath>
         </dependency>
+
         <dependency>
             <groupId>com.sk89q</groupId>
             <artifactId>WorldGuard</artifactId>
@@ -138,11 +162,13 @@
         <system>jenkins</system>
         <url>http://ci.citizensnpcs.co</url>
     </ciManagement>
+
     <scm>
         <connection>scm:git:git://github.com/mcmonkey4eva/Sentinel.git</connection>
         <developerConnection>scm:git:git:@github.com:mcmonkey4eva/Sentinel.git</developerConnection>
         <url>https://github.com/mcmonkey4eva/Sentinel/tree/master/</url>
     </scm>
+
     <distributionManagement>
         <repository>
             <id>citizens-repo</id>
@@ -235,3 +261,4 @@
 
     <url>https://github.com/mcmonkey4eva/Sentinel</url>
 </project>
+

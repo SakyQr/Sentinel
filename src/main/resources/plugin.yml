@@ -12,6 +12,10 @@ commands:
     description: Lists Sentinel commands.
     usage: /sentinel help
     permission: sentinel.basic
+  warrior:
+      description: Command to attack a kingdom
+      usage: /<command> attack <kingdom-name>
+
 
 permissions:
   sentinel.*:
